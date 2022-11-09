@@ -27,5 +27,12 @@
         Form_siswa.ShowDialog()
     End Sub
 
+    Private Sub Transaksi_Click(sender As Object, e As EventArgs) Handles transaksi.Click
+        Form_transaksi.ShowDialog()
+    End Sub
 
+    Private Sub Laporan_Click(sender As Object, e As EventArgs) Handles laporan.Click
+        FormLaporan.ShowDialog()
+
+    End Sub
 End Class

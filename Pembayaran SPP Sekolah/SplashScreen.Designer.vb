@@ -25,7 +25,6 @@ Partial Class SplashScreen
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_loading = New System.Windows.Forms.Label()
-        Me.pb_loading = New System.Windows.Forms.ProgressBar()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -55,15 +54,6 @@ Partial Class SplashScreen
         Me.lbl_loading.Size = New System.Drawing.Size(17, 22)
         Me.lbl_loading.TabIndex = 2
         Me.lbl_loading.Text = "0"
-        '
-        'pb_loading
-        '
-        Me.pb_loading.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pb_loading.Location = New System.Drawing.Point(0, 337)
-        Me.pb_loading.Name = "pb_loading"
-        Me.pb_loading.Size = New System.Drawing.Size(682, 25)
-        Me.pb_loading.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.pb_loading.TabIndex = 3
         '
         'Timer1
         '
@@ -115,7 +105,6 @@ Partial Class SplashScreen
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(682, 362)
         Me.ControlBox = False
-        Me.Controls.Add(Me.pb_loading)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lbl_loading)
         Me.Controls.Add(Me.PictureBox2)
@@ -136,7 +125,6 @@ Partial Class SplashScreen
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lbl_loading As Label
-    Friend WithEvents pb_loading As ProgressBar
     Friend WithEvents Timer1 As Timer
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox

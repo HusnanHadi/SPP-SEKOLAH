@@ -1,16 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Form_kelas
-    Dim con As MySqlConnection
-    Dim cmd As MySqlCommand
-    Dim da As MySqlDataAdapter
-    Dim dr As MySqlDataReader
-    Dim ds As DataSet
-    Dim myDB As String
-    Sub koneksi()
+    Sub OpenConnection()
         myDB = "Database=project;Server=localhost;uid=root;password="
-        con = New MySqlConnection(myDB)
-        If con.State = ConnectionState.Closed Then
-            con.Open()
+        CONN = New MySqlConnection(myDB)
+        If CONN.State = ConnectionState.Closed Then
+            CONN.Open()
         End If
     End Sub
     Sub kondisiawal()
@@ -30,13 +24,12 @@ Public Class Form_kelas
         btn_hapus.Enabled = True
         btn_keluar.Enabled = True
 
-        Call koneksi()
+        Call OpenConnection()
         ModuleSPP.OpenConnection()
-        da = New MySqlDataAdapter("select * from tbkelas", con)
+        da = New MySqlDataAdapter("select * from tbkelas", CONN)
         ds = New DataSet
         da.Fill(ds)
         dgvKelas.DataSource = ds.Tables(0)
-        ModuleSPP.CloseConnection()
     End Sub
     Private Sub Kelas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call kondisiawal()
@@ -60,11 +53,11 @@ Public Class Form_kelas
             If tb_kodeKelas.Text = "" Or tb_namaKelas.Text = "" Then
                 MsgBox("Pastikan semua kolom terisi")
             Else
-                Call koneksi()
-
-                Dim inputdata As String = "insert into tbkelas values('" & tb_kodeKelas.Text & "','" & tb_namaKelas.Text & "')"
-                cmd = New MySqlCommand(inputdata, con)
-                cmd.ExecuteNonQuery()
+                Call OpenConnection()
+                Dim Kelas = New kelas With {
+                    .Kode_Kelas = tb_kodeKelas.Text,
+                    .Nama_Kelas = tb_namaKelas.Text}
+                Kelas.Simpan()
 
                 MsgBox("Input data berhasil")
 
@@ -75,13 +68,13 @@ Public Class Form_kelas
 
     Private Sub tb_kodeKelas_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_kodeKelas.KeyPress
         If e.KeyChar = Chr(13) Then
-            Call koneksi()
+            Call OpenConnection()
 
-            cmd = New MySqlCommand("select * from tbkelas where kode_kelas ='" & tb_kodeKelas.Text & "'", con)
+            cmd = New MySqlCommand("select * from tbkelas where Kode_Kelas ='" & tb_kodeKelas.Text & "'", CONN)
             dr = cmd.ExecuteReader
             dr.Read()
             If dr.HasRows Then
-                tb_namaKelas.Text = dr.Item("nama_kelas")
+                tb_namaKelas.Text = dr.Item("Nama_Kelas")
             Else
                 MsgBox("Data tidak ada")
             End If
@@ -102,11 +95,10 @@ Public Class Form_kelas
             If tb_kodeKelas.Text = "" Or tb_namaKelas.Text = "" Then
                 MsgBox("Pastikan semua kolom terisi penuh")
             Else
-                Call koneksi()
-                Dim editdata As String = "Update tbkelas set nama_kelas ='" & tb_namaKelas.Text & "' Where kode_kelas = '" & tb_kodeKelas.Text & "'"
-                cmd = New MySqlCommand(editdata, con)
-                cmd.ExecuteNonQuery()
-
+                Dim Kelas = New kelas With {
+                    .Kode_Kelas = tb_kodeKelas.Text,
+                    .Nama_Kelas = tb_namaKelas.Text}
+                Kelas.Edit()
 
                 MsgBox("Edit data berhasil")
                 Call kondisiawal()
@@ -126,10 +118,10 @@ Public Class Form_kelas
             If tb_kodeKelas.Text = "" Or tb_namaKelas.Text = "" Then
                 MsgBox("Pastika data yang akan dihapus terisi")
             Else
-                Call koneksi()
-                Dim hapusdata As String = "Delete from tbkelas where kode_kelas = '" & tb_kodeKelas.Text & "'"
-                cmd = New MySqlCommand(hapusdata, con)
-                cmd.ExecuteNonQuery()
+                Dim Kelas = New kelas With {
+                    .Kode_Kelas = tb_kodeKelas.Text,
+                    .Nama_Kelas = tb_namaKelas.Text}
+                Kelas.Hapus()
 
                 MsgBox("Hapus data berhasil")
 
@@ -153,13 +145,10 @@ Public Class Form_kelas
     Private Sub tb_namaKelas_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_namaKelas.KeyPress
         If e.KeyChar = Chr(13) Then
             btn_simpan.PerformClick()
-            btn_hapus.PerformClick()
+        ElseIf e.KeyChar = Chr(13) Then
             btn_edit.PerformClick()
+        ElseIf e.KeyChar = Chr(13) Then
+            btn_hapus.PerformClick()
         End If
-        Call kondisiawal()
-    End Sub
-
-    Private Sub Tb_namaKelas_TextChanged(sender As Object, e As EventArgs) Handles tb_namaKelas.TextChanged
-
     End Sub
 End Class

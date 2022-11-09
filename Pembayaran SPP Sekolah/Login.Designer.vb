@@ -35,23 +35,24 @@ Partial Class Form_login
         'cb_tmplPassword
         '
         Me.cb_tmplPassword.AutoSize = True
+        Me.cb_tmplPassword.BackColor = System.Drawing.Color.Transparent
         Me.cb_tmplPassword.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cb_tmplPassword.Location = New System.Drawing.Point(103, 150)
+        Me.cb_tmplPassword.Location = New System.Drawing.Point(96, 162)
         Me.cb_tmplPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.cb_tmplPassword.Name = "cb_tmplPassword"
         Me.cb_tmplPassword.Size = New System.Drawing.Size(121, 18)
         Me.cb_tmplPassword.TabIndex = 11
         Me.cb_tmplPassword.Text = "Tampilkan Password"
-        Me.cb_tmplPassword.UseVisualStyleBackColor = True
+        Me.cb_tmplPassword.UseVisualStyleBackColor = False
         '
         'btn_keluar
         '
         Me.btn_keluar.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_keluar.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_keluar.Location = New System.Drawing.Point(103, 201)
+        Me.btn_keluar.Location = New System.Drawing.Point(96, 216)
         Me.btn_keluar.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_keluar.Name = "btn_keluar"
-        Me.btn_keluar.Size = New System.Drawing.Size(115, 26)
+        Me.btn_keluar.Size = New System.Drawing.Size(134, 28)
         Me.btn_keluar.TabIndex = 13
         Me.btn_keluar.Text = "Keluar"
         Me.btn_keluar.UseVisualStyleBackColor = False
@@ -60,10 +61,10 @@ Partial Class Form_login
         '
         Me.btn_login.BackColor = System.Drawing.SystemColors.HighlightText
         Me.btn_login.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_login.Location = New System.Drawing.Point(103, 171)
+        Me.btn_login.Location = New System.Drawing.Point(96, 184)
         Me.btn_login.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_login.Name = "btn_login"
-        Me.btn_login.Size = New System.Drawing.Size(115, 26)
+        Me.btn_login.Size = New System.Drawing.Size(134, 28)
         Me.btn_login.TabIndex = 12
         Me.btn_login.Text = "Login"
         Me.btn_login.UseVisualStyleBackColor = False
@@ -71,27 +72,28 @@ Partial Class Form_login
         'tb_password
         '
         Me.tb_password.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_password.Location = New System.Drawing.Point(103, 127)
+        Me.tb_password.Location = New System.Drawing.Point(96, 137)
         Me.tb_password.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_password.Name = "tb_password"
         Me.tb_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tb_password.Size = New System.Drawing.Size(117, 23)
+        Me.tb_password.Size = New System.Drawing.Size(136, 23)
         Me.tb_password.TabIndex = 10
         '
         'tb_username
         '
         Me.tb_username.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_username.Location = New System.Drawing.Point(103, 89)
+        Me.tb_username.Location = New System.Drawing.Point(96, 93)
         Me.tb_username.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_username.Name = "tb_username"
-        Me.tb_username.Size = New System.Drawing.Size(117, 23)
+        Me.tb_username.Size = New System.Drawing.Size(136, 23)
         Me.tb_username.TabIndex = 9
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(100, 110)
+        Me.Label3.Location = New System.Drawing.Point(92, 118)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(64, 16)
@@ -101,8 +103,9 @@ Partial Class Form_login
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(100, 72)
+        Me.Label2.Location = New System.Drawing.Point(92, 74)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(64, 16)
@@ -112,19 +115,23 @@ Partial Class Form_login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(55, 27)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Rockwell Condensed", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(70, 31)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(213, 25)
+        Me.Label1.Size = New System.Drawing.Size(190, 34)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "SELAMAT DATANG"
         '
         'Form_login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(323, 255)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(330, 255)
+        Me.ControlBox = False
         Me.Controls.Add(Me.cb_tmplPassword)
         Me.Controls.Add(Me.btn_keluar)
         Me.Controls.Add(Me.btn_login)
@@ -133,8 +140,11 @@ Partial Class Form_login
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Font = New System.Drawing.Font("Rockwell", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Form_login"
-        Me.Text = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

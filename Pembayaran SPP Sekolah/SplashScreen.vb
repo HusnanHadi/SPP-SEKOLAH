@@ -4,7 +4,7 @@
         Dim newProgress = progress + 1
         If (newProgress <= 100) Then
             lbl_loading.Text = newProgress & " %"
-            pb_loading.Value = newProgress
+
             progress = newProgress
         Else
             Timer1.Stop()
