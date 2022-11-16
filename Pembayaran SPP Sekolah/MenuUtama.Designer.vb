@@ -63,14 +63,14 @@ Partial Class FormMenuUtama
         Me.login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.login.Image = Global.Pembayaran_SPP_Sekolah.My.Resources.Resources.Login_37128
         Me.login.Name = "login"
-        Me.login.Size = New System.Drawing.Size(180, 24)
+        Me.login.Size = New System.Drawing.Size(145, 24)
         Me.login.Text = "LOGIN"
         '
         'logout
         '
         Me.logout.Image = Global.Pembayaran_SPP_Sekolah.My.Resources.Resources.Logout_37127
         Me.logout.Name = "logout"
-        Me.logout.Size = New System.Drawing.Size(180, 24)
+        Me.logout.Size = New System.Drawing.Size(145, 24)
         Me.logout.Text = "LOGOUT"
         '
         'masterData
@@ -84,14 +84,14 @@ Partial Class FormMenuUtama
         '
         Me.kelas.Image = Global.Pembayaran_SPP_Sekolah.My.Resources.Resources.folder_blue_16863
         Me.kelas.Name = "kelas"
-        Me.kelas.Size = New System.Drawing.Size(180, 24)
+        Me.kelas.Size = New System.Drawing.Size(128, 24)
         Me.kelas.Text = "KELAS"
         '
         'siswa
         '
         Me.siswa.Image = Global.Pembayaran_SPP_Sekolah.My.Resources.Resources.users_clients_group_16774
         Me.siswa.Name = "siswa"
-        Me.siswa.Size = New System.Drawing.Size(180, 24)
+        Me.siswa.Size = New System.Drawing.Size(128, 24)
         Me.siswa.Text = "SISWA"
         '
         'transaksi
@@ -123,7 +123,7 @@ Partial Class FormMenuUtama
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormMenuUtama"

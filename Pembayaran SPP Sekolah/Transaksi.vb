@@ -242,16 +242,16 @@ Public Class Form_transaksi
     Private Sub tb_nis_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_nis.KeyPress
         If e.KeyChar = Chr(13) Then
             Call OpenConection()
-            cmd = New MySqlCommand("select * from tbspp where NIS ='" & tb_nis.Text & "'", CONN)
+            cmd = New MySqlCommand("select * from tbsiswa where NIS ='" & tb_nis.Text & "'", CONN)
             dr = cmd.ExecuteReader
             dr.Read()
             If dr.HasRows Then
-                tb_noPembayaran.Text = dr.Item("No_Pembayaran")
+                'tb_noPembayaran.Text = dr.Item("No_Pembayaran")
                 tb_nis.Text = dr.Item("nis")
                 tb_nama.Text = dr.Item("nama_siswa")
-                dtp2.Value = dr.Item("tanggal_bayar")
-                cb_sppBulan.Text = dr.Item("spp_bulan")
-                tb_jmlhBayar.Text = dr.Item("jumlah")
+                'dtp2.Value = dr.Item("tanggal_bayar")
+                'cb_sppBulan.Text = dr.Item("spp_bulan")
+                'tb_jmlhBayar.Text = dr.Item("jumlah")
             Else
                 MsgBox("Data tidak ada")
             End If

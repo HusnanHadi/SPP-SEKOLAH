@@ -22,7 +22,7 @@ Partial Class Form_transaksi
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_transaksi))
         Me.cb_sppBulan = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -201,19 +201,20 @@ Partial Class Form_transaksi
         Me.dgvPembayaran.AllowUserToDeleteRows = False
         Me.dgvPembayaran.AllowUserToResizeColumns = False
         Me.dgvPembayaran.AllowUserToResizeRows = False
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvPembayaran.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Times New Roman", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvPembayaran.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvPembayaran.BackgroundColor = System.Drawing.SystemColors.HighlightText
         Me.dgvPembayaran.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvPembayaran.GridColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.dgvPembayaran.Location = New System.Drawing.Point(327, 54)
         Me.dgvPembayaran.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvPembayaran.MultiSelect = False
         Me.dgvPembayaran.Name = "dgvPembayaran"
         Me.dgvPembayaran.ReadOnly = True
         Me.dgvPembayaran.RowHeadersVisible = False
         Me.dgvPembayaran.RowTemplate.Height = 28
         Me.dgvPembayaran.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPembayaran.Size = New System.Drawing.Size(705, 279)
+        Me.dgvPembayaran.Size = New System.Drawing.Size(588, 279)
         Me.dgvPembayaran.TabIndex = 119
         '
         'Label10
@@ -287,7 +288,7 @@ Partial Class Form_transaksi
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1049, 350)
+        Me.ClientSize = New System.Drawing.Size(923, 350)
         Me.Controls.Add(Me.btn_hapus)
         Me.Controls.Add(Me.btn_edit)
         Me.Controls.Add(Me.Label13)
