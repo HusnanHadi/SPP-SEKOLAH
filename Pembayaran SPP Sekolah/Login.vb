@@ -5,9 +5,7 @@
         FormMenuUtama.masterData.Enabled = True
         FormMenuUtama.transaksi.Enabled = True
         FormMenuUtama.laporan.Enabled = True
-
     End Sub
-
     Private Sub Btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         If tb_username.Text = "" Or tb_password.Text = "" Then
             MsgBox("Semua kolom tidak boleh kosong", vbCritical, "Warning")

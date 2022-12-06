@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Form_kelas
+    'membuat fungsi buka koneksi ke database
     Sub OpenConnection()
         myDB = "Database=project;Server=localhost;uid=root;password="
         CONN = New MySqlConnection(myDB)
@@ -8,12 +9,13 @@ Public Class Form_kelas
         End If
     End Sub
     Sub kondisiawal()
+        'kondisi awal textbox ketika pertama kali dibuka
         tb_kodeKelas.Text = ""
         tb_namaKelas.Text = ""
         tb_kodeKelas.Enabled = False
         tb_namaKelas.Enabled = False
         tb_kodeKelas.MaxLength = 5
-
+        'kondisi awal button ketika pertama kali dibuka
         btn_simpan.Text = "Input"
         btn_edit.Text = "Edit"
         btn_hapus.Text = "Hapus"
@@ -23,7 +25,7 @@ Public Class Form_kelas
         btn_edit.Enabled = True
         btn_hapus.Enabled = True
         btn_keluar.Enabled = True
-
+        'panggil koneksi ke database
         Call OpenConnection()
         ModuleSPP.OpenConnection()
         da = New MySqlDataAdapter("select * from tbkelas", CONN)
@@ -35,22 +37,28 @@ Public Class Form_kelas
         Call kondisiawal()
     End Sub
     Sub fieldaktif()
+        'kondisi setelah salah satu button diklik
         tb_kodeKelas.Enabled = True
         tb_namaKelas.Enabled = True
+        'kursor langsung ke textbox kode kelas
         tb_kodeKelas.Focus()
     End Sub
-
     Private Sub Btn_simpan_Click(sender As Object, e As EventArgs) Handles btn_simpan.Click
+        'ketika button input ditekan
         If btn_simpan.Text = "Input" Then
             btn_simpan.Text = "Simpan"
-
+            'button edit terkunci
             btn_edit.Enabled = False
+            'button hapus terkunci
             btn_hapus.Enabled = False
+            'button keluar berubah jadi batal
             btn_keluar.Text = "Batal"
 
             Call fieldaktif()
         Else
+            'mengecek apakah semua kolom sudah terisi
             If tb_kodeKelas.Text = "" Or tb_namaKelas.Text = "" Then
+                'jika ada kolom yang tak terisi, maka akan muncul messegebox
                 MsgBox("Pastikan semua kolom terisi")
             Else
                 Call OpenConnection()
@@ -65,23 +73,6 @@ Public Class Form_kelas
             End If
         End If
     End Sub
-
-    Private Sub tb_kodeKelas_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_kodeKelas.KeyPress
-        If e.KeyChar = Chr(13) Then
-            Call OpenConnection()
-
-            cmd = New MySqlCommand("select * from tbkelas where Kode_Kelas ='" & tb_kodeKelas.Text & "'", CONN)
-            dr = cmd.ExecuteReader
-            dr.Read()
-            If dr.HasRows Then
-                tb_namaKelas.Text = dr.Item("Nama_Kelas")
-            Else
-                MsgBox("Data tidak ada")
-            End If
-        End If
-
-    End Sub
-
     Private Sub Btn_edit_Click(sender As Object, e As EventArgs) Handles btn_edit.Click
         If btn_edit.Text = "Edit" Then
             btn_edit.Text = "Update"
@@ -105,7 +96,6 @@ Public Class Form_kelas
             End If
         End If
     End Sub
-
     Private Sub Btn_hapus_Click(sender As Object, e As EventArgs) Handles btn_hapus.Click
         If btn_hapus.Text = "Hapus" Then
             btn_hapus.Text = "Delete"
@@ -129,7 +119,6 @@ Public Class Form_kelas
             End If
         End If
     End Sub
-
     Private Sub Btn_keluar_Click(sender As Object, e As EventArgs) Handles btn_keluar.Click
         If btn_keluar.Text = "Keluar" Then
             Me.Close()
@@ -137,7 +126,6 @@ Public Class Form_kelas
             Call kondisiawal()
         End If
     End Sub
-
     Private Sub dgvKelas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvKelas.CellClick
         tb_kodeKelas.Text = dgvKelas.Rows(e.RowIndex).Cells(0).Value
         tb_namaKelas.Text = dgvKelas.Rows(e.RowIndex).Cells(1).Value
@@ -145,10 +133,6 @@ Public Class Form_kelas
     Private Sub tb_namaKelas_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_namaKelas.KeyPress
         If e.KeyChar = Chr(13) Then
             btn_simpan.PerformClick()
-        ElseIf e.KeyChar = Chr(13) Then
-            btn_edit.PerformClick()
-        ElseIf e.KeyChar = Chr(13) Then
-            btn_hapus.PerformClick()
         End If
     End Sub
 End Class

@@ -33,7 +33,6 @@ Partial Class Form_siswa
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btn_cari = New System.Windows.Forms.Button()
         Me.btn_keluar = New System.Windows.Forms.Button()
         Me.btn_hapus = New System.Windows.Forms.Button()
         Me.btn_edit = New System.Windows.Forms.Button()
@@ -166,18 +165,6 @@ Partial Class Form_siswa
         Me.Label3.Size = New System.Drawing.Size(85, 16)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Jenis Kelamin"
-        '
-        'btn_cari
-        '
-        Me.btn_cari.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.btn_cari.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cari.Location = New System.Drawing.Point(483, 9)
-        Me.btn_cari.Margin = New System.Windows.Forms.Padding(2)
-        Me.btn_cari.Name = "btn_cari"
-        Me.btn_cari.Size = New System.Drawing.Size(58, 27)
-        Me.btn_cari.TabIndex = 23
-        Me.btn_cari.Text = "Cari"
-        Me.btn_cari.UseVisualStyleBackColor = False
         '
         'btn_keluar
         '
@@ -404,7 +391,6 @@ Partial Class Form_siswa
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(846, 364)
         Me.Controls.Add(Me.dgvSiswa)
-        Me.Controls.Add(Me.btn_cari)
         Me.Controls.Add(Me.btn_keluar)
         Me.Controls.Add(Me.btn_hapus)
         Me.Controls.Add(Me.btn_edit)
@@ -437,7 +423,6 @@ Partial Class Form_siswa
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents btn_cari As Button
     Friend WithEvents btn_keluar As Button
     Friend WithEvents btn_hapus As Button
     Friend WithEvents btn_edit As Button

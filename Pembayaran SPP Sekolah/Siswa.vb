@@ -15,15 +15,12 @@ Public Class Form_siswa
     End Sub
     Sub kondisiawal()
         tb_nama.Text = ""
-        cb_jkelamin.Text = ""
-        cb_jkelamin.ResetText()
+        cb_jkelamin.Refresh()
         dtp1.ResetText()
         tb_alamat.Text = ""
         tb_telpon.Text = ""
-        cb_agama.Text = ""
-        cb_agama.ResetText()
-        cb_thMasuk.Text = ""
-        cb_thMasuk.ResetText()
+        cb_agama.Refresh()
+        cb_thMasuk.Refresh()
         tb_kodeKelas.Text = ""
         tb_namaKelas.Text = ""
         tb_nis.Enabled = False
@@ -54,8 +51,9 @@ Public Class Form_siswa
         dgvSiswa.DataSource = ds.Tables(0)
     End Sub
     Private Sub FormSiswa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call kondisiawal()
         Call NoOtomatis()
+        Call kondisiawal()
+
     End Sub
     Sub fieldaktif()
         tb_nis.Enabled = True
@@ -166,29 +164,6 @@ Public Class Form_siswa
             End If
         End If
     End Sub
-    Private Sub tb_nis_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_nis.KeyPress
-        If e.KeyChar = Chr(13) Then
-            Call OpenConnection()
-
-            CMD = New MySqlCommand("select * from tbsiswa where NIS ='" & tb_nis.Text & "'", CONN)
-            dr = CMD.ExecuteReader
-            dr.Read()
-            If dr.HasRows Then
-                tb_nis.Text = dr.Item("NIS")
-                tb_nama.Text = dr.Item("Nama_Siswa")
-                cb_jkelamin.Text = dr.Item("Jenis_Kelamin")
-                dtp1.Value = dr.Item("Tanggal_Lahir")
-                tb_alamat.Text = dr.Item("Alamat")
-                tb_telpon.Text = dr.Item("Telpon")
-                cb_agama.Text = dr.Item("Agama")
-                cb_thMasuk.Text = dr.Item("Tahun_Masuk")
-                tb_kodeKelas.Text = dr.Item("Kode_Kelas")
-                tb_namaKelas.Text = dr.Item("Nama_Kelas")
-            Else
-                MsgBox("Data tidak ada")
-            End If
-        End If
-    End Sub
     Private Sub dgvSiswa_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSiswa.CellClick
         tb_nis.Text = dgvSiswa.Rows(e.RowIndex).Cells(0).Value
         tb_nama.Text = dgvSiswa.Rows(e.RowIndex).Cells(1).Value
@@ -206,20 +181,6 @@ Public Class Form_siswa
             Me.Close()
         Else
             Call kondisiawal()
-        End If
-    End Sub
-    Private Sub Btn_cari_Click(sender As Object, e As EventArgs) Handles btn_cari.Click
-        Call OpenConnection()
-        CMD = New MySqlCommand("select * from tbsiswa where Nama_Siswa like '%" & tb_cari.Text & "%'", CONN)
-        dr = CMD.ExecuteReader
-        dr.Read()
-        If dr.HasRows Then
-            Call OpenConnection()
-            da = New MySqlDataAdapter("select * from tbsiswa where Nama_Kelas like '%" & tb_cari.Text & "%'", CONN)
-            ds = New DataSet
-            da.Fill(ds, "DataKetemu")
-            dgvSiswa.DataSource = ds.Tables("DataKetemu")
-            dgvSiswa.ReadOnly = True
         End If
     End Sub
     Private Sub tb_cari_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_cari.KeyPress
@@ -275,7 +236,9 @@ Public Class Form_siswa
         If Not dr.HasRows = True Then
             tb_nis.Text = "20030600" + "01"
         Else
-            If tb_nis.Text = "20030600" + Format(Microsoft.VisualBasic.Right(dr.Item("NIS"), 8) + 1, "00") Then
+            If Microsoft.VisualBasic.Mid(dr.Item("NIS"), 2, 8) = 20030600 Then
+                tb_nis.Text = "20030600" + Format(Microsoft.VisualBasic.Right(dr.Item("NIS"), 8) + 1, "00")
+            Else
                 tb_nis.Text = "20030600" + "01"
             End If
         End If
@@ -289,5 +252,12 @@ Public Class Form_siswa
         dgvSiswa.DataSource = ds.Tables("tbsiswa")
         dgvSiswa.AllowUserToAddRows = False
         dgvSiswa.ReadOnly = True
+    End Sub
+
+    Private Sub Form_siswa_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        cb_agama.Text = ""
+        cb_jkelamin.Text = ""
+        cb_thMasuk.Text = ""
+
     End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormLaporan
+Partial Class Form_Laporan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class FormLaporan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLaporan))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Laporan))
         Me.rb_bulan = New System.Windows.Forms.RadioButton()
         Me.rb_tahun = New System.Windows.Forms.RadioButton()
         Me.cb_bulan = New System.Windows.Forms.ComboBox()
@@ -125,7 +125,7 @@ Partial Class FormLaporan
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Tahun"
         '
-        'FormLaporan
+        'Form_Laporan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -144,7 +144,7 @@ Partial Class FormLaporan
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "FormLaporan"
+        Me.Name = "Form_Laporan"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LAPORAN"
         Me.ResumeLayout(False)
