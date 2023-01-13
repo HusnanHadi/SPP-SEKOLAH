@@ -26,8 +26,8 @@
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tb_username.MaxLength = 10
         tb_password.PasswordChar = "*"
-        tb_username.Clear()
-        tb_password.Clear()
+        tb_username.Text = "admin"
+        tb_password.Text = "admin"
         tb_username.Focus()
     End Sub
 

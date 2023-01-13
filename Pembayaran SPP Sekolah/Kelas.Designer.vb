@@ -46,7 +46,7 @@ Partial Class Form_kelas
         Me.btn_simpan.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(91, 30)
-        Me.btn_simpan.TabIndex = 10
+        Me.btn_simpan.TabIndex = 3
         Me.btn_simpan.Text = "Simpan"
         Me.btn_simpan.UseVisualStyleBackColor = False
         '
@@ -72,7 +72,7 @@ Partial Class Form_kelas
         Me.Label2.Location = New System.Drawing.Point(3, 75)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 16)
+        Me.Label2.Size = New System.Drawing.Size(107, 22)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Nama Kelas"
         '
@@ -83,7 +83,7 @@ Partial Class Form_kelas
         Me.Label1.Location = New System.Drawing.Point(3, 37)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 16)
+        Me.Label1.Size = New System.Drawing.Size(104, 22)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Kode Kelas"
         '
@@ -93,7 +93,7 @@ Partial Class Form_kelas
         Me.tb_namaKelas.Location = New System.Drawing.Point(89, 73)
         Me.tb_namaKelas.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_namaKelas.Name = "tb_namaKelas"
-        Me.tb_namaKelas.Size = New System.Drawing.Size(93, 23)
+        Me.tb_namaKelas.Size = New System.Drawing.Size(93, 30)
         Me.tb_namaKelas.TabIndex = 2
         '
         'tb_kodeKelas
@@ -102,7 +102,7 @@ Partial Class Form_kelas
         Me.tb_kodeKelas.Location = New System.Drawing.Point(89, 35)
         Me.tb_kodeKelas.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_kodeKelas.Name = "tb_kodeKelas"
-        Me.tb_kodeKelas.Size = New System.Drawing.Size(93, 23)
+        Me.tb_kodeKelas.Size = New System.Drawing.Size(93, 30)
         Me.tb_kodeKelas.TabIndex = 1
         '
         'btn_keluar
@@ -113,7 +113,7 @@ Partial Class Form_kelas
         Me.btn_keluar.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_keluar.Name = "btn_keluar"
         Me.btn_keluar.Size = New System.Drawing.Size(91, 30)
-        Me.btn_keluar.TabIndex = 13
+        Me.btn_keluar.TabIndex = 6
         Me.btn_keluar.Text = "Keluar"
         Me.btn_keluar.UseVisualStyleBackColor = False
         '
@@ -136,6 +136,7 @@ Partial Class Form_kelas
         Me.dgvKelas.ReadOnly = True
         Me.dgvKelas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvKelas.RowHeadersVisible = False
+        Me.dgvKelas.RowHeadersWidth = 62
         Me.dgvKelas.RowTemplate.Height = 28
         Me.dgvKelas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvKelas.Size = New System.Drawing.Size(289, 167)
@@ -149,7 +150,7 @@ Partial Class Form_kelas
         Me.btn_hapus.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_hapus.Name = "btn_hapus"
         Me.btn_hapus.Size = New System.Drawing.Size(91, 30)
-        Me.btn_hapus.TabIndex = 12
+        Me.btn_hapus.TabIndex = 5
         Me.btn_hapus.Text = "Hapus"
         Me.btn_hapus.UseVisualStyleBackColor = False
         '
@@ -161,13 +162,13 @@ Partial Class Form_kelas
         Me.btn_edit.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(91, 30)
-        Me.btn_edit.TabIndex = 11
+        Me.btn_edit.TabIndex = 4
         Me.btn_edit.Text = "Edit"
         Me.btn_edit.UseVisualStyleBackColor = False
         '
         'Form_kelas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(5.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(307, 331)

@@ -16,7 +16,7 @@ Public Class transaksi
             Return Nothing
         Else
             Dim Transaksi = New transaksi With {
-                .No_Pembayaran = dr.Item("NIS"),
+                .No_Pembayaran = dr.Item("No_Pembayaran"),
                 .Tanggal_Bayar = dr.Item("Tanggal_Bayar"),
                 .NIS = dr.Item("NIS"),
                 .Nama_Siswa = dr.Item("Nama_Siswa"),

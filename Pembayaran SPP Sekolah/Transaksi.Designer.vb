@@ -56,7 +56,7 @@ Partial Class Form_transaksi
         Me.cb_sppBulan.Location = New System.Drawing.Point(138, 148)
         Me.cb_sppBulan.Margin = New System.Windows.Forms.Padding(2)
         Me.cb_sppBulan.Name = "cb_sppBulan"
-        Me.cb_sppBulan.Size = New System.Drawing.Size(143, 23)
+        Me.cb_sppBulan.Size = New System.Drawing.Size(143, 30)
         Me.cb_sppBulan.TabIndex = 5
         '
         'Label1
@@ -66,7 +66,7 @@ Partial Class Form_transaksi
         Me.Label1.Location = New System.Drawing.Point(5, 36)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 16)
+        Me.Label1.Size = New System.Drawing.Size(135, 22)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "No Pembayaran"
         '
@@ -76,7 +76,7 @@ Partial Class Form_transaksi
         Me.tb_jmlhBayar.Location = New System.Drawing.Point(138, 177)
         Me.tb_jmlhBayar.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_jmlhBayar.Name = "tb_jmlhBayar"
-        Me.tb_jmlhBayar.Size = New System.Drawing.Size(143, 23)
+        Me.tb_jmlhBayar.Size = New System.Drawing.Size(143, 30)
         Me.tb_jmlhBayar.TabIndex = 6
         '
         'tb_nama
@@ -85,7 +85,7 @@ Partial Class Form_transaksi
         Me.tb_nama.Location = New System.Drawing.Point(138, 119)
         Me.tb_nama.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_nama.Name = "tb_nama"
-        Me.tb_nama.Size = New System.Drawing.Size(143, 23)
+        Me.tb_nama.Size = New System.Drawing.Size(143, 30)
         Me.tb_nama.TabIndex = 4
         '
         'tb_nis
@@ -94,7 +94,7 @@ Partial Class Form_transaksi
         Me.tb_nis.Location = New System.Drawing.Point(138, 90)
         Me.tb_nis.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_nis.Name = "tb_nis"
-        Me.tb_nis.Size = New System.Drawing.Size(143, 23)
+        Me.tb_nis.Size = New System.Drawing.Size(143, 30)
         Me.tb_nis.TabIndex = 3
         '
         'tb_noPembayaran
@@ -103,7 +103,7 @@ Partial Class Form_transaksi
         Me.tb_noPembayaran.Location = New System.Drawing.Point(138, 33)
         Me.tb_noPembayaran.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_noPembayaran.Name = "tb_noPembayaran"
-        Me.tb_noPembayaran.Size = New System.Drawing.Size(143, 23)
+        Me.tb_noPembayaran.Size = New System.Drawing.Size(143, 30)
         Me.tb_noPembayaran.TabIndex = 1
         '
         'Label3
@@ -113,7 +113,7 @@ Partial Class Form_transaksi
         Me.Label3.Location = New System.Drawing.Point(5, 92)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 16)
+        Me.Label3.Size = New System.Drawing.Size(41, 22)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "NIS"
         '
@@ -124,7 +124,7 @@ Partial Class Form_transaksi
         Me.Label2.Location = New System.Drawing.Point(5, 65)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 16)
+        Me.Label2.Size = New System.Drawing.Size(124, 22)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Tanggal Bayar"
         '
@@ -136,7 +136,7 @@ Partial Class Form_transaksi
         Me.btn_hapus.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_hapus.Name = "btn_hapus"
         Me.btn_hapus.Size = New System.Drawing.Size(80, 37)
-        Me.btn_hapus.TabIndex = 118
+        Me.btn_hapus.TabIndex = 9
         Me.btn_hapus.Text = "Hapus"
         Me.btn_hapus.UseVisualStyleBackColor = False
         '
@@ -148,7 +148,7 @@ Partial Class Form_transaksi
         Me.btn_edit.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(80, 37)
-        Me.btn_edit.TabIndex = 117
+        Me.btn_edit.TabIndex = 8
         Me.btn_edit.Text = "Edit"
         Me.btn_edit.UseVisualStyleBackColor = False
         '
@@ -159,17 +159,17 @@ Partial Class Form_transaksi
         Me.Label13.Location = New System.Drawing.Point(323, 26)
         Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(61, 16)
+        Me.Label13.Size = New System.Drawing.Size(87, 22)
         Me.Label13.TabIndex = 114
         Me.Label13.Text = "Cari Data"
         '
         'tb_cari
         '
         Me.tb_cari.Font = New System.Drawing.Font("Times New Roman", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_cari.Location = New System.Drawing.Point(399, 22)
+        Me.tb_cari.Location = New System.Drawing.Point(426, 23)
         Me.tb_cari.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_cari.Name = "tb_cari"
-        Me.tb_cari.Size = New System.Drawing.Size(192, 23)
+        Me.tb_cari.Size = New System.Drawing.Size(192, 30)
         Me.tb_cari.TabIndex = 115
         '
         'btn_simpan
@@ -180,7 +180,7 @@ Partial Class Form_transaksi
         Me.btn_simpan.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(80, 37)
-        Me.btn_simpan.TabIndex = 116
+        Me.btn_simpan.TabIndex = 7
         Me.btn_simpan.Text = "Simpan"
         Me.btn_simpan.UseVisualStyleBackColor = False
         '
@@ -191,7 +191,7 @@ Partial Class Form_transaksi
         Me.Label4.Location = New System.Drawing.Point(5, 122)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 16)
+        Me.Label4.Size = New System.Drawing.Size(56, 22)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Nama"
         '
@@ -212,6 +212,7 @@ Partial Class Form_transaksi
         Me.dgvPembayaran.Name = "dgvPembayaran"
         Me.dgvPembayaran.ReadOnly = True
         Me.dgvPembayaran.RowHeadersVisible = False
+        Me.dgvPembayaran.RowHeadersWidth = 62
         Me.dgvPembayaran.RowTemplate.Height = 28
         Me.dgvPembayaran.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPembayaran.Size = New System.Drawing.Size(588, 279)
@@ -224,7 +225,7 @@ Partial Class Form_transaksi
         Me.Label10.Location = New System.Drawing.Point(5, 180)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(84, 16)
+        Me.Label10.Size = New System.Drawing.Size(117, 22)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Jumlah Bayar"
         '
@@ -235,7 +236,7 @@ Partial Class Form_transaksi
         Me.Label9.Location = New System.Drawing.Point(5, 150)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(66, 16)
+        Me.Label9.Size = New System.Drawing.Size(93, 22)
         Me.Label9.TabIndex = 6
         Me.Label9.Text = "SPP Bulan"
         '
@@ -247,7 +248,7 @@ Partial Class Form_transaksi
         Me.btn_keluar.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_keluar.Name = "btn_keluar"
         Me.btn_keluar.Size = New System.Drawing.Size(80, 37)
-        Me.btn_keluar.TabIndex = 121
+        Me.btn_keluar.TabIndex = 10
         Me.btn_keluar.Text = "Keluar"
         Me.btn_keluar.UseVisualStyleBackColor = False
         '
@@ -257,7 +258,7 @@ Partial Class Form_transaksi
         Me.dtp2.Location = New System.Drawing.Point(138, 62)
         Me.dtp2.Margin = New System.Windows.Forms.Padding(2)
         Me.dtp2.Name = "dtp2"
-        Me.dtp2.Size = New System.Drawing.Size(143, 23)
+        Me.dtp2.Size = New System.Drawing.Size(143, 30)
         Me.dtp2.TabIndex = 2
         '
         'GroupBox1
@@ -279,13 +280,13 @@ Partial Class Form_transaksi
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(283, 225)
+        Me.GroupBox1.Size = New System.Drawing.Size(297, 225)
         Me.GroupBox1.TabIndex = 113
         Me.GroupBox1.TabStop = False
         '
         'Form_transaksi
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(923, 350)

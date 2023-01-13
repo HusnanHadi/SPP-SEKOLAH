@@ -14,6 +14,7 @@ Public Class Form_siswa
         End If
     End Sub
     Sub kondisiawal()
+        tb_nis.Text = ""
         tb_nama.Text = ""
         cb_jkelamin.Refresh()
         dtp1.ResetText()
@@ -258,6 +259,14 @@ Public Class Form_siswa
         cb_agama.Text = ""
         cb_jkelamin.Text = ""
         cb_thMasuk.Text = ""
+
+    End Sub
+
+    Private Sub tb_nis_TextChanged(sender As Object, e As EventArgs) Handles tb_nis.TextChanged
+
+    End Sub
+
+    Private Sub dtp1_ValueChanged(sender As Object, e As EventArgs) Handles dtp1.ValueChanged
 
     End Sub
 End Class

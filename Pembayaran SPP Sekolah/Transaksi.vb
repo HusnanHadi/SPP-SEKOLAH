@@ -1,20 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Form_transaksi
-    Dim CONN As MySqlConnection
-    Dim cmd As MySqlCommand
-    Dim da As MySqlDataAdapter
-    Dim dr As MySqlDataReader
-    Dim ds As DataSet
-    Dim myDB As String
-    Sub OpenConection()
-        myDB = "Database=project;Server=localhost;uid=root;password="
-        CONN = New MySqlConnection(myDB)
-        If CONN.State = ConnectionState.Closed Then
-            CONN.Open()
-        End If
-    End Sub
     Sub kondisiawal()
-
         dtp2.ResetText()
         tb_nis.Text = ""
         tb_nama.Text = ""
@@ -38,8 +24,8 @@ Public Class Form_transaksi
         btn_hapus.Enabled = True
         btn_keluar.Enabled = True
 
-        Call OpenConection()
-        ModuleSPP.OpenConnection()
+        Call OpenConnection()
+        ' ModuleSPP.OpenConnection()
         da = New MySqlDataAdapter("select * from tbspp", CONN)
         ds = New DataSet
         da.Fill(ds)
@@ -71,7 +57,7 @@ Public Class Form_transaksi
             If tb_noPembayaran.Text = "" Or tb_nis.Text = "" Or tb_nama.Text = "" Or cb_sppBulan.Text = "" Or tb_jmlhBayar.Text = "" Then
                 MsgBox("Pastikan semua kolom terisi")
             Else
-                Call OpenConection()
+                Call OpenConnection()
 
                 Dim Transaksi = New transaksi With {
                     .No_Pembayaran = tb_noPembayaran.Text,
@@ -151,11 +137,11 @@ Public Class Form_transaksi
     End Sub
     Private Sub dgvSPP_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPembayaran.CellClick
         tb_noPembayaran.Text = dgvPembayaran.Rows(e.RowIndex).Cells(0).Value
-        cb_sppBulan.Text = dgvPembayaran.Rows(e.RowIndex).Cells(1).Value
-        dtp2.Value = dgvPembayaran.Rows(e.RowIndex).Cells(2).Value
-        tb_jmlhBayar.Text = dgvPembayaran.Rows(e.RowIndex).Cells(3).Value
-        tb_nis.Text = dgvPembayaran.Rows(e.RowIndex).Cells(4).Value
-        tb_nama.Text = dgvPembayaran.Rows(e.RowIndex).Cells(5).Value
+        tb_nis.Text = dgvPembayaran.Rows(e.RowIndex).Cells(1).Value
+        tb_nama.Text = dgvPembayaran.Rows(e.RowIndex).Cells(2).Value
+        cb_sppBulan.Text = dgvPembayaran.Rows(e.RowIndex).Cells(3).Value
+        dtp2.Value = dgvPembayaran.Rows(e.RowIndex).Cells(4).Value
+        tb_jmlhBayar.Text = dgvPembayaran.Rows(e.RowIndex).Cells(5).Value
     End Sub
     Private Sub Btn_keluar_Click_1(sender As Object, e As EventArgs) Handles btn_keluar.Click
         If btn_keluar.Text = "Keluar" Then
@@ -213,7 +199,7 @@ Public Class Form_transaksi
     End Sub
     Private Sub tb_nis_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_nis.KeyPress
         If e.KeyChar = Chr(13) Then
-            Call OpenConection()
+            Call OpenConnection()
             cmd = New MySqlCommand("select * from tbsiswa where NIS ='" & tb_nis.Text & "'", CONN)
             dr = cmd.ExecuteReader
             dr.Read()
@@ -224,5 +210,15 @@ Public Class Form_transaksi
                 MsgBox("Data tidak ada")
             End If
         End If
+    End Sub
+    Private Sub tb_cari_TextChanged(sender As Object, e As EventArgs) Handles tb_cari.TextChanged
+        Call OpenConnection()
+        da = New MySqlDataAdapter("select * from tbspp where Nama_Siswa like '%" & tb_cari.Text & "%'", CONN)
+        ds = New DataSet
+        ds.Clear()
+        da.Fill(ds, "tbsiswa")
+        dgvPembayaran.DataSource = ds.Tables("tbsiswa")
+        dgvPembayaran.AllowUserToAddRows = False
+        dgvPembayaran.ReadOnly = True
     End Sub
 End Class

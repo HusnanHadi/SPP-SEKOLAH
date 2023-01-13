@@ -73,6 +73,7 @@ Partial Class Form_siswa
         Me.dgvSiswa.Name = "dgvSiswa"
         Me.dgvSiswa.ReadOnly = True
         Me.dgvSiswa.RowHeadersVisible = False
+        Me.dgvSiswa.RowHeadersWidth = 62
         Me.dgvSiswa.RowTemplate.Height = 28
         Me.dgvSiswa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvSiswa.Size = New System.Drawing.Size(554, 260)
@@ -85,7 +86,7 @@ Partial Class Form_siswa
         Me.Label8.Location = New System.Drawing.Point(5, 228)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(85, 16)
+        Me.Label8.Size = New System.Drawing.Size(114, 22)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Tahun Masuk"
         '
@@ -96,7 +97,7 @@ Partial Class Form_siswa
         Me.Label7.Location = New System.Drawing.Point(5, 198)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(47, 16)
+        Me.Label7.Size = New System.Drawing.Size(65, 22)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Agama"
         '
@@ -107,7 +108,7 @@ Partial Class Form_siswa
         Me.Label9.Location = New System.Drawing.Point(9, 256)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(71, 16)
+        Me.Label9.Size = New System.Drawing.Size(104, 22)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Kode Kelas"
         '
@@ -118,7 +119,7 @@ Partial Class Form_siswa
         Me.Label11.Location = New System.Drawing.Point(5, 284)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(75, 16)
+        Me.Label11.Size = New System.Drawing.Size(107, 22)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Nama Kelas"
         '
@@ -129,7 +130,7 @@ Partial Class Form_siswa
         Me.Label6.Location = New System.Drawing.Point(5, 170)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(46, 16)
+        Me.Label6.Size = New System.Drawing.Size(65, 22)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Telpon"
         '
@@ -140,7 +141,7 @@ Partial Class Form_siswa
         Me.Label5.Location = New System.Drawing.Point(5, 140)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(47, 16)
+        Me.Label5.Size = New System.Drawing.Size(67, 22)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Alamat"
         '
@@ -151,7 +152,7 @@ Partial Class Form_siswa
         Me.Label4.Location = New System.Drawing.Point(5, 113)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 16)
+        Me.Label4.Size = New System.Drawing.Size(119, 22)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Tanggal Lahir"
         '
@@ -162,7 +163,7 @@ Partial Class Form_siswa
         Me.Label3.Location = New System.Drawing.Point(5, 84)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(85, 16)
+        Me.Label3.Size = New System.Drawing.Size(122, 22)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Jenis Kelamin"
         '
@@ -174,7 +175,7 @@ Partial Class Form_siswa
         Me.btn_keluar.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_keluar.Name = "btn_keluar"
         Me.btn_keluar.Size = New System.Drawing.Size(85, 38)
-        Me.btn_keluar.TabIndex = 22
+        Me.btn_keluar.TabIndex = 14
         Me.btn_keluar.Text = "Keluar"
         Me.btn_keluar.UseVisualStyleBackColor = False
         '
@@ -186,7 +187,7 @@ Partial Class Form_siswa
         Me.btn_hapus.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_hapus.Name = "btn_hapus"
         Me.btn_hapus.Size = New System.Drawing.Size(85, 38)
-        Me.btn_hapus.TabIndex = 21
+        Me.btn_hapus.TabIndex = 13
         Me.btn_hapus.Text = "Hapus"
         Me.btn_hapus.UseVisualStyleBackColor = False
         '
@@ -198,7 +199,7 @@ Partial Class Form_siswa
         Me.btn_edit.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(85, 38)
-        Me.btn_edit.TabIndex = 20
+        Me.btn_edit.TabIndex = 12
         Me.btn_edit.Text = "Edit"
         Me.btn_edit.UseVisualStyleBackColor = False
         '
@@ -209,7 +210,7 @@ Partial Class Form_siswa
         Me.Label2.Location = New System.Drawing.Point(5, 54)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 16)
+        Me.Label2.Size = New System.Drawing.Size(56, 22)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Nama"
         '
@@ -220,7 +221,7 @@ Partial Class Form_siswa
         Me.Label1.Location = New System.Drawing.Point(5, 26)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(31, 16)
+        Me.Label1.Size = New System.Drawing.Size(41, 22)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "NIS"
         '
@@ -230,7 +231,7 @@ Partial Class Form_siswa
         Me.dtp1.Location = New System.Drawing.Point(104, 110)
         Me.dtp1.Margin = New System.Windows.Forms.Padding(2)
         Me.dtp1.Name = "dtp1"
-        Me.dtp1.Size = New System.Drawing.Size(143, 23)
+        Me.dtp1.Size = New System.Drawing.Size(143, 30)
         Me.dtp1.TabIndex = 4
         '
         'tb_kodeKelas
@@ -239,7 +240,7 @@ Partial Class Form_siswa
         Me.tb_kodeKelas.Location = New System.Drawing.Point(104, 254)
         Me.tb_kodeKelas.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_kodeKelas.Name = "tb_kodeKelas"
-        Me.tb_kodeKelas.Size = New System.Drawing.Size(143, 23)
+        Me.tb_kodeKelas.Size = New System.Drawing.Size(143, 30)
         Me.tb_kodeKelas.TabIndex = 9
         '
         'btn_simpan
@@ -250,7 +251,7 @@ Partial Class Form_siswa
         Me.btn_simpan.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(85, 38)
-        Me.btn_simpan.TabIndex = 19
+        Me.btn_simpan.TabIndex = 11
         Me.btn_simpan.Text = "Simpan"
         Me.btn_simpan.UseVisualStyleBackColor = False
         '
@@ -260,8 +261,8 @@ Partial Class Form_siswa
         Me.tb_namaKelas.Location = New System.Drawing.Point(104, 282)
         Me.tb_namaKelas.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_namaKelas.Name = "tb_namaKelas"
-        Me.tb_namaKelas.Size = New System.Drawing.Size(143, 23)
-        Me.tb_namaKelas.TabIndex = 6
+        Me.tb_namaKelas.Size = New System.Drawing.Size(143, 30)
+        Me.tb_namaKelas.TabIndex = 10
         '
         'Label10
         '
@@ -270,7 +271,7 @@ Partial Class Form_siswa
         Me.Label10.Location = New System.Drawing.Point(271, 14)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(61, 16)
+        Me.Label10.Size = New System.Drawing.Size(87, 22)
         Me.Label10.TabIndex = 25
         Me.Label10.Text = "Cari Data"
         '
@@ -280,7 +281,7 @@ Partial Class Form_siswa
         Me.tb_telpon.Location = New System.Drawing.Point(104, 167)
         Me.tb_telpon.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_telpon.Name = "tb_telpon"
-        Me.tb_telpon.Size = New System.Drawing.Size(143, 23)
+        Me.tb_telpon.Size = New System.Drawing.Size(143, 30)
         Me.tb_telpon.TabIndex = 6
         '
         'tb_alamat
@@ -289,7 +290,7 @@ Partial Class Form_siswa
         Me.tb_alamat.Location = New System.Drawing.Point(104, 138)
         Me.tb_alamat.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_alamat.Name = "tb_alamat"
-        Me.tb_alamat.Size = New System.Drawing.Size(143, 23)
+        Me.tb_alamat.Size = New System.Drawing.Size(143, 30)
         Me.tb_alamat.TabIndex = 5
         '
         'tb_nama
@@ -298,7 +299,7 @@ Partial Class Form_siswa
         Me.tb_nama.Location = New System.Drawing.Point(104, 52)
         Me.tb_nama.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_nama.Name = "tb_nama"
-        Me.tb_nama.Size = New System.Drawing.Size(143, 23)
+        Me.tb_nama.Size = New System.Drawing.Size(143, 30)
         Me.tb_nama.TabIndex = 2
         '
         'cb_thMasuk
@@ -309,7 +310,7 @@ Partial Class Form_siswa
         Me.cb_thMasuk.Location = New System.Drawing.Point(104, 225)
         Me.cb_thMasuk.Margin = New System.Windows.Forms.Padding(2)
         Me.cb_thMasuk.Name = "cb_thMasuk"
-        Me.cb_thMasuk.Size = New System.Drawing.Size(143, 23)
+        Me.cb_thMasuk.Size = New System.Drawing.Size(143, 30)
         Me.cb_thMasuk.TabIndex = 8
         '
         'cb_agama
@@ -320,7 +321,7 @@ Partial Class Form_siswa
         Me.cb_agama.Location = New System.Drawing.Point(104, 196)
         Me.cb_agama.Margin = New System.Windows.Forms.Padding(2)
         Me.cb_agama.Name = "cb_agama"
-        Me.cb_agama.Size = New System.Drawing.Size(143, 23)
+        Me.cb_agama.Size = New System.Drawing.Size(143, 30)
         Me.cb_agama.TabIndex = 7
         '
         'cb_jkelamin
@@ -331,7 +332,7 @@ Partial Class Form_siswa
         Me.cb_jkelamin.Location = New System.Drawing.Point(104, 81)
         Me.cb_jkelamin.Margin = New System.Windows.Forms.Padding(2)
         Me.cb_jkelamin.Name = "cb_jkelamin"
-        Me.cb_jkelamin.Size = New System.Drawing.Size(143, 23)
+        Me.cb_jkelamin.Size = New System.Drawing.Size(143, 30)
         Me.cb_jkelamin.TabIndex = 3
         '
         'tb_cari
@@ -340,7 +341,7 @@ Partial Class Form_siswa
         Me.tb_cari.Location = New System.Drawing.Point(346, 10)
         Me.tb_cari.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_cari.Name = "tb_cari"
-        Me.tb_cari.Size = New System.Drawing.Size(131, 23)
+        Me.tb_cari.Size = New System.Drawing.Size(131, 30)
         Me.tb_cari.TabIndex = 24
         '
         'tb_nis
@@ -349,7 +350,7 @@ Partial Class Form_siswa
         Me.tb_nis.Location = New System.Drawing.Point(104, 23)
         Me.tb_nis.Margin = New System.Windows.Forms.Padding(2)
         Me.tb_nis.Name = "tb_nis"
-        Me.tb_nis.Size = New System.Drawing.Size(143, 23)
+        Me.tb_nis.Size = New System.Drawing.Size(143, 30)
         Me.tb_nis.TabIndex = 1
         '
         'GroupBox1
@@ -386,7 +387,7 @@ Partial Class Form_siswa
         '
         'Form_siswa
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(846, 364)
